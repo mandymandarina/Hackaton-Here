@@ -1,0 +1,25 @@
+{
+  "name": "hackaton-here",
+  "version": "1.0.0",
+  "description": "A Here Maps implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VioletaLibertad/Hackaton-Here.git"
+  },
+  "keywords": [
+    "Here",
+    "Maps",
+    "Voice",
+    "Pet"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VioletaLibertad/Hackaton-Here/issues"
+  },
+  "homepage": "https://github.com/VioletaLibertad/Hackaton-Here#readme"
+}
