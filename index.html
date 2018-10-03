@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
+<meta name=" viewport " content=" width = device-width, initial-scale = 1 ">
+<meta charset="UTF-8">
+<link rel=" stylesheet " type=" text / css " href=" https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css ">
+<link rel="stylesheet" href="src/map/mapu/css/style.css">
+<head>
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css">
+  <link rel="stylesheet" href="./src//css/index.css">
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
+</head>
+
+<body>
+  <div class="ctrl-panel">
+    <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
+    <div class="form-group">
+      <label for="destination">Lo que buscas</label>
+      <select id="destination" onchange="route()">
+        <option value="">Busca aqui</option>
+        <option value="Av. Recoleta 3552, Recoleta">veterinarias</option>
+        <option value="French 2673, Recoleta">Petshop</option>
+        <option value="Río de La Plata 1229, Las Condes">Fundaciones</option>                
+      </select>
+    </div>
+    <div>
+      <p id="direccion">Dirección:</p>
+    </div>
+  </div>
+  <div style="width:100%; height: 300px" id="mapContainer"></div>
+
+
+  <script src="src/map/mapu/js/app.js"></script>
+  <script src="src/map/mapu/js/main.js"></script>
+</body>
+
+</html>
