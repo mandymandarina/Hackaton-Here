@@ -40,7 +40,7 @@
   </ul>
 
   <!-- Main Page -->
-  <div class="container hide">
+  <div class="container">
     <section>
       <h5>Encuentra lo que necesitas</h5>
       <div>
@@ -66,7 +66,7 @@
         </form>
       </div>
       <!-- MAP GOES HERE!!! -->
-      <div id="mapContainer">INSERTE MAPA AQUÍ</div>
+      <div id="mapContainer"></div>
     </section>
   </div>
 
@@ -76,34 +76,42 @@
       <h5>Mascotas Extraviadas</h5>
       <p>Reporta a través del mapa que has perdido a tu mascota, completa el formulario con los detalles por si alguien
         la ve. </p>
-      <p>Cuando la encuentres elimina el aviso en: <strong>Editar mascotas extraviadas.</strong></p>
-      <div class="btn-group">
-        <button class="btn waves-effect btn-large">REPORTAR MASCOTA</button>
-        <button class="btn waves-effect btn-large">EDITAR MASCOTAS EXTRAVIADAS</button>
-      </div>
+      <p>Cuando la encuentres elimina el aviso en: <strong>TBC</strong></p>
+      <button class="btn waves-effect btn-large">REPORTAR MASCOTA</button>
     </section>
   </div>
 
   <!-- Report Missing Pet Section -->
-  <div class="container">
+  <div class="container hide">
     <section>
       <h5>Reportar Mascota</h5>
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="input_text" type="text" data-length="10">
-              <label for="input_text">Input text</label>
+              <input id="pet_name" type="text">
+              <label for="pet_name">Nombre de la mascota</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="dd/mm/aaaa" id="pet_missing" type="text" data-length="10">
+              <label for="pet_missing">Fecha de extravío</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-              <label for="textarea2">Textarea</label>
+              <textarea id="pet_features" class="materialize-textarea" data-length="120"></textarea>
+              <label for="pet_features">Características y comentarios</label>
             </div>
           </div>
         </form>
+        <button class="btn waves-effect">REPORTAR MASCOTA</button>
       </div>
+
+      <!-- MAP GOES HERE!!! -->
+      <p>Posiciona en el mapa el lugar de extravío</p>
+      <div id="mapContainer2">INSERTE MAPA AQUÍ</div>
     </section>
   </div>
 
@@ -114,13 +122,12 @@
       M.AutoInit();
     });
   </script>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./js/app.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./map/mapu/js/app.js"></script>
   <script src="./js/jquery.js"></script>
 </body>
 
