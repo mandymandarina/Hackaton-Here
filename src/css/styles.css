@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Funcionalidad Aparecer y Desaparecer */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Navbar styles */
+.nav-wrapper {
+  background-color: #BECBDB;
+}
+
+.nav-wrapper > ul > li > a {
+  color: #243141;
+  font-weight: bold;
+}
+
+.sidenav {
+  background-color: #243141;
+}
+
+.sidenav > li > a {
+  color: #fafafa;
+}
+
+#containerForLogo {
+  padding: 3rem;
+  background-color: #2B3747;
+}
+
+/*Main Page*/
+#mainCheckboxes > p > label > input span {
+  display: inline;
+}
