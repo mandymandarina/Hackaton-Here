@@ -8,6 +8,7 @@
   <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="login.css">
   <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
@@ -43,20 +44,22 @@
             </div>
           </div>
           <div col-3>
-            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="loginWithFirebase()">Login
+            <button class="waves-effect waves-light btn" type="submit" name="action" onclick="loginWithFirebase()">Login
               <i class="material-icons right">send</i></button> <br>
-            <button class="btn waves-effect  indigo darken-4" type="submit" name="action" onclick="loginFacebook()">FACEBOOK
-              <i class="material-icons right">beenhere</i></button>
-            <button class="btn waves-effect red accent-4" type="submit" name="action">GOOGLE
-              <i class="material-icons right">beenhere</i></button>
+            <button class="btn waves-effect  indigo darken-4" type="submit" name="action" onclick="loginFacebook()">
+              <i class="fab fa-facebook-f"></i> FACEBOOK</button>
+            <button id="logeoGoogle" class="btn waves-effect red accent-4" type="submit" name="action" onclick="loginGoogle()">
+              <i class="fab fa-google"></i> GOOGLE</button>
+              <button id="botonlogout" class="waves-effect waves-light btn" type="submit" name="action" onclick="logout()">Logout
+                <i class="material-icons right">send</i></button> <br>
           </div>
         <br>
-        <p>¿No tienes Cuenta? <a href="regitro.html">Registrate!</a> </p>
-        <p>¿No te quieres registrar? <a href="">Ingresa como Visita!</a> </p>
+        <p>¿No tienes Cuenta? <a href="../Registro/registro.html">Registrate!</a> </p>
       </div>
     </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
@@ -70,29 +73,20 @@
     });
   </script>
 
-  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
-      authDomain: "voice-pet.firebaseapp.com",
-      databaseURL: "https://voice-pet.firebaseio.com",
-      projectId: "voice-pet",
-      storageBucket: "voice-pet.appspot.com",
-      messagingSenderId: "179273412230"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
+    authDomain: "voice-pet.firebaseapp.com",
+    databaseURL: "https://voice-pet.firebaseio.com",
+    projectId: "voice-pet",
+    storageBucket: "voice-pet.appspot.com",
+    messagingSenderId: "179273412230"
+  };
+  firebase.initializeApp(config);
+</script>
 
-<!-- Add additional services that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js"></script>
 
 </body>
 

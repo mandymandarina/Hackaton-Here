@@ -38,11 +38,60 @@ function loginWithFirebase(){
 function loginFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
 
-    auth().signInWithPopup(provider).then(function(result){
+   /* firebase.auth().signInWithPopup(provider).then(function(result){
         alert("Exito");
         console.log(result);
     }).catch(function(error){
         alert("Error");
         console.log(error);
-    });
+    }); */
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var token = result.credential.accessToken;
+        console.log(token);
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user);
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        console.log(errorCode);
+        var errorMessage = error.message;
+        console.log(errorMessage);
+        // The email of the user's account used.
+        var email = error.email;
+        console.log(email);
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(credential);
+        // ...
+      });
+}
+
+function loginGoogle() {
+    const authService = firebase.auth();
+
+    // manejador de eventos para loguearse
+document.getElementById('logeoGoogle').addEventListener('click', function() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('email');
+    authService.signInWithPopup(provider)
+          .then(function(result) {
+              // logueado con éxito
+              console.log('Hemos autenticado al usuario ', result.user);
+          })
+          .catch(function(error) {
+              // Fallo de login
+              console.log('Se ha encontrado un error:', error);
+          });
+  });
+}
+
+function logout() {
+    const authService = firebase.auth();
+    // manejador de eventos para cerrar sesión (logout)
+document.getElementById('botonlogout').addEventListener('click', function() {
+    authService.signOut();
+  });
 }
