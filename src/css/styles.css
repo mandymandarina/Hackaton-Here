@@ -39,10 +39,3 @@ body {
 #mainCheckboxes > p > label > input span {
   display: inline;
 }
-
-.btn-group > button {
-  margin-left: auto;
-  margin-right: auto;
-  margin: 1rem;
-  text-align: center;
-}
