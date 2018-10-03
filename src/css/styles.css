@@ -31,11 +31,26 @@ body {
 }
 
 #containerForLogo {
-  padding: 3rem;
+  padding: 2px;
   background-color: #2B3747;
+  size: 50px;
+}
+
+.nav-wrapper .brand-logo img {
+  height: 50px;
+}
+
+.sidenav .brand-logo img {
+  height: 200px;
 }
 
 /*Main Page*/
 #mainCheckboxes > p > label > input span {
   display: inline;
+}
+
+@media (max-width: 600px) {
+  .navbar-material .nav-wrapper .brand-logo img {
+    height: 2px;
+  }
 }
