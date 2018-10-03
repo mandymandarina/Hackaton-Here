@@ -49,8 +49,16 @@ body {
   display: inline;
 }
 
+<<<<<<< HEAD
 @media (max-width: 600px) {
   .navbar-material .nav-wrapper .brand-logo img {
     height: 2px;
   }
+=======
+.btn-group > button {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1rem;
+  text-align: center;
+>>>>>>> d808bc992e6581516a867c3289df0a2e559f143e
 }
