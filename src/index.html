@@ -71,23 +71,53 @@
   </div>
 
   <!-- Missing Pet Section -->
-  <div class="container">
+  <div class="container hide">
     <section>
       <h5>Mascotas Extraviadas</h5>
-      <p>Reporta a través del mapa que has perdido a tu mascota, completa el formulario con los detalles por si alguien la ve. </p>
+      <p>Reporta a través del mapa que has perdido a tu mascota, completa el formulario con los detalles por si alguien
+        la ve. </p>
       <p>Cuando la encuentres elimina el aviso en: <strong>Editar mascotas extraviadas.</strong></p>
+      <div class="btn-group">
+        <button class="btn waves-effect btn-large">REPORTAR MASCOTA</button>
+        <button class="btn waves-effect btn-large">EDITAR MASCOTAS EXTRAVIADAS</button>
+      </div>
+    </section>
+  </div>
 
-      <button class="btn waves-effect btn-large">REPORTAR MASCOTA</button>
-      <button class="btn waves-effect btn-large">EDITAR MASCOTAS EXTRAVIADAS</button>     
+  <!-- Report Missing Pet Section -->
+  <div class="container">
+    <section>
+      <h5>Reportar Mascota</h5>
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Nombre Mascota" value="Alvin" id="pet_name" type="text" class="validate">
+          <label for="pet_name">Nombre Mascota</label><br>
 
+          <input value="dd/mm/aaaa" id="pet_missing_date" type="text" class="validate">
+          <label for="pet_missing_date">Fecha Perdida</label><br>
+
+          <textarea id="pet_features" class="materialize-textarea" data-length="120"></textarea>
+          <label for="pet_features"></label><br>
+        </div>
+      </div>
     </section>
   </div>
 
 
-  <!--JavaScript at end of body for optimized loading-->
+  <!--Sidenav JavaScript at end of body for optimized loading-->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();
+    });
+    // This is for pet_name
+    $(document).ready(function () {
+      M.updateTextFields();
+    });
+    // This is for pet_features
+    $('#textarea1').val('New Text');
+    M.textareaAutoResize($('#textarea1'));
+    $(document).ready(function () {
+      $('input#input_text, textarea#textarea2').characterCounter();
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
