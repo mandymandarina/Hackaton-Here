@@ -18,9 +18,16 @@ button {
 
 .content {
     -webkit-border-radius: 10px 10px;
-    background-color: white; 
     size: 50%;
     box-sizing: content-box;    
+}
+
+strong {
+    background-color: white;
+    padding: 4%;
+    box-sizing: content-box;
+    -webkit-border-radius: 10px 10px;
+
 }
 
 .container {
