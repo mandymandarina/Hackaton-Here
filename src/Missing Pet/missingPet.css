@@ -14,7 +14,7 @@ body {
 
 /* Navbar styles */
 .nav-wrapper {
-  background-color: #009688;
+  background-color: #BECBDB;
 }
 
 .nav-wrapper > ul > li > a {
@@ -30,7 +30,7 @@ body {
   color: #fafafa;
 }
 
-#containerForLogo > a > img {
+#containerForLogo {
   padding: 2px;
   background-color: #2B3747;
   size: 50px;
