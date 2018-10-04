@@ -2,76 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../Login/login.css">
-    <title>Voice Pets</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../Login/login.css">
+  <title>Voice Pets</title>
 </head>
 
 <body>
 
-        <header class="container center" id="titulo">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <h3><strong>REGISTRATE</strong></h3>
-                    </div>
-                </div>   
-            </header>
-        
-                <div class="container center">
-                    <section id="registro" class="row" style="width : 70%; height: 70%;">
-                                <div class="input-field row">
-                                        <i class="material-icons prefix">account_circle</i>
-                                    <input id="nameLastname" type="text" class="validate">
-                                    <label for="icon_prefix" style="color: black">Nombre y Apellido</label>
-                                  </div>
-                            <div class="input-field row">
-                                    <i class="material-icons prefix">mail</i>
-                                <input id="email" type="email" class="validate">
-                                <label for="icon_prefix" style="color: black">Email</label>
-                              </div>
-                              <div class="input-field row">
-                                    <i class="material-icons prefix">security</i>
-                                <input id="password" type="password" class="validate">
-                                <label for="icon_prefix" style="color: black">Password</label>
-                              </div>
-                        <button class="waves-effect waves-light btn" onclick="registerWithFirebase()" type="submit" name="action" style="color: black">Enviar Registro
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </section>
-                    <a href="../Login/login.html" style="color:black">¿YA TIENES CUENTA?</a>
-                </div>
+  <header class="container center" id="titulo">
+    <div class="row">
+      <div class="input-field col s12">
+        <h3><strong>REGISTRATE</strong></h3>
+      </div>
+    </div>
+  </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../Login/login.js"></script>
+  <div class="container center">
+    <section id="registro" class="row" style="width : 70%; height: 70%;">
+      <div class="input-field row">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="nameLastname" type="text" class="validate">
+        <label for="icon_prefix" style="color: black">Nombre y Apellido</label>
+      </div>
+      <div class="input-field row">
+        <i class="material-icons prefix">mail</i>
+        <input id="email" type="email" class="validate">
+        <label for="icon_prefix" style="color: black">Email</label>
+      </div>
+      <div class="input-field row">
+        <i class="material-icons prefix">security</i>
+        <input id="password" type="password" class="validate">
+        <label for="icon_prefix" style="color: black">Password</label>
+      </div>
+      <button class="waves-effect waves-light btn" onclick="registerWithFirebase()" type="submit" name="action" style="color: black">Enviar
+        Registro
+        <i class="material-icons right">send</i>
+      </button>
+    </section>
+    <a href="../Login/login.html" style="color:black">¿YA TIENES CUENTA?</a>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();
-        });
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../Login/login.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
-    authDomain: "voice-pet.firebaseapp.com",
-    databaseURL: "https://voice-pet.firebaseio.com",
-    projectId: "voice-pet",
-    storageBucket: "voice-pet.appspot.com",
-    messagingSenderId: "179273412230"
-  };
-  firebase.initializeApp(config);
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
+      authDomain: "voice-pet.firebaseapp.com",
+      databaseURL: "https://voice-pet.firebaseio.com",
+      projectId: "voice-pet",
+      storageBucket: "voice-pet.appspot.com",
+      messagingSenderId: "179273412230"
+    };
+    firebase.initializeApp(config);
+  </script>
 
 
 </body>

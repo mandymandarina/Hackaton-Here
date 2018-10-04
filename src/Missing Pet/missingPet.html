@@ -10,14 +10,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./missingPet.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><span class="black-text">Voice Pet</span></a>
+      <a href="#!" class="brand-logo"><img class="navLogo" src="../../assets/img/logodosvetpet.png" alt=""></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Perfil</a></li>
@@ -29,7 +29,7 @@
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li id="containerForLogo"><a href="#">LOGO</a></li>
+    <li id="containerForLogo" class="brand-logo center"><img src="../../assets/img/logounovoicepet.png" alt=""></li>
     <li><a href="#">PERFIL</a></li>
     <li><a href="#">DENUNCIAS SOS</a></li>
     <li><a href="#">MASCOTA EXTRAVIADA</a></li>
@@ -49,19 +49,22 @@
         3. Sube una fotografía de él/ella.</p>
       <p>Si algún usuario de la aplicación la encuentra, se comunicará contigo a través del número que nos otorgaste al
         momento de registrarte</p>
-      <button class="btn waves-effect">REPORTAR MASCOTA</button>
+      <div class="btn-custom">
+        <button id="start-missing-btn" class="btn waves-effect btn-custom">REPORTAR MASCOTA</button>
+      </div>
       <p>Cuando tu mascota se encuentre ya contigo, elimina el aviso en el <strong>Tablero de anuncios.</strong></p>
     </section>
   </div>
 
   <!-- Missing Pet Map -->
-  <div class="container hide">
+  <div id="missingPetMap" class="container hide">
     <section>
       <h5>Reportar mascota</h5>
-      <p>Selecciona y explora el mapa<span>1/3</span></p>
+      <span class="counter-span">1/3</span>
+      <p>Selecciona y explora el mapa</p>
       <!-- MAP GOES HERE!!! -->
-      <div id="mapContainer2">INSERTE MAPA AQUÍ</div>
-      <button class="btn waves-effect">SIGUIENTE</button>
+      <div id="mapContainer">INSERTE MAPA AQUÍ</div>
+      <button id="map-missing-btn" class="btn waves-effect">SIGUIENTE</button>
     </section>
   </div>
 
@@ -91,12 +94,13 @@
             </div>
           </div>
         </form>
-        <button class="btn waves-effect">SIGUIENTE</button>
+        <button id="form-missing-btn" class="btn waves-effect">SIGUIENTE</button>
       </div>
     </section>
   </div>
+
   <!-- Missing Pet Photo -->
-  <div class="container hide">
+  <div id="missingPetPhoto" class="container hide">
     <section>
       <h5>Reportar mascota</h5>
       <p>Sube una fotografía<span>3/3</span></p>
@@ -111,7 +115,7 @@
           </div>
         </div>
       </form>
-      <button class="btn waves-effect">REPORTAR MASCOTA</button>
+      <button id="photo-missing-btn" class="btn waves-effect">REPORTAR MASCOTA</button>
     </section>
   </div>
 
@@ -125,9 +129,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./map/mapu/js/app.js"></script>
+  <script src="./missingPet.js"></script>
+  <script src="../map/mapu/js/mapu.js"></script>
   <script src="./js/jquery.js"></script>
 </body>
 

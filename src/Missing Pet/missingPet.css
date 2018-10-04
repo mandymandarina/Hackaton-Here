@@ -14,7 +14,7 @@ body {
 
 /* Navbar styles */
 .nav-wrapper {
-  background-color: #BECBDB;
+  background-color: #009688;
 }
 
 .nav-wrapper > ul > li > a {
@@ -30,7 +30,7 @@ body {
   color: #fafafa;
 }
 
-#containerForLogo {
+#containerForLogo > a > img {
   padding: 2px;
   background-color: #2B3747;
   size: 50px;
@@ -44,15 +44,24 @@ body {
   height: 200px;
 }
 
+.navLogo {
+  margin-left: 20rem;
+}
+
 @media (max-width: 600px) {
   .navbar-material .nav-wrapper .brand-logo img {
     height: 2px;
   }
 }
 
-/*Main Page*/
-#mainCheckboxes > p > label > input span {
-  display: inline;
+/* Missing Pet Section */
+.btn-custom {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counter-span {
+  text-align: right;
 }
 
 
