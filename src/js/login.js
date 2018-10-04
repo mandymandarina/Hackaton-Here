@@ -8,7 +8,7 @@ function registerWithFirebase(){
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario creado con éxito");
-            location.href ="../../muro.html";
+            location.href ="../main.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -26,7 +26,7 @@ function loginWithFirebase(){
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario inició sesión con éxito");
-            location.href ="muro.html";
+            location.href ="./main.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
