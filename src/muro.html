@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./map/mapu/css/mapu.css">
   <title>Muro</title>
 
 </head>
@@ -20,21 +19,21 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Voice Pet <img src="Login/img/logodosvetpet.png"></a>
+      <a href="#!" class="brand-logo">Voice Pet <img src="../assets/img/logodosvetpet.png"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Perfil</a></li>
         <li><a href="#">Denuncias SOS</a></li>
         <li><a href="#">Mascota Extraviada</a></li>
         <li><a href="http://www.teprotejo.cl/">Pet Friendly</a></li>
-        <li><a onclick="logout()" href="/src/Login/login.html">Logout</a></li>
+        <li><a onclick="logout()" href="/src/login.html">Logout</a></li>
 
       </ul>
     </div>
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
+    <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/logounovoicepet.png"></li>
     <li><a href="#">PERFIL</a></li>
     <li><a href="#">DENUNCIAS SOS</a></li>
     <li><a href="#">MASCOTA EXTRAVIADA</a></li>
@@ -46,32 +45,30 @@
     <li><a onclick="logout()" href="/src/Login/login.html">CERRAR SESIÓN</a></li>
   </ul>
 
-  <!-- textarea para post -->
-  <div class="row">
-    <form class="col s12">
+      <!-- textarea para post -->
+      <br>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
-          <label for="email">Nombre</label>
-          <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
-        </div>
-        <div class="input-field col s12">
-          <input id="post" type="text" class="validate">
-          <label for="email">Publicación</label>
-          <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
-        </div>
+        <div class="container">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="email">Nombre</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
+            </div>
+            <div class="input-field col s12">
+              <input id="post" type="text" class="validate">
+              <label for="email">Publicación</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
+            </div>
+            <button class="waves-effect waves-light btn" type="submit" name="action" onclick="loginWithFirebase()">Login
+                <i class="material-icons right">send</i></button> <br>
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
+      </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./map/mapu/js/mapu.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();

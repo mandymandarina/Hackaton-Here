@@ -1,19 +1,20 @@
 body {
-  background-image: url(../../assets/img/fondopies.png)
+  background-image: url("../../assets/img/fondopies.png");
+  background-size: cover;
+  filter:  alpha(opacity=50);
+}
+
+.container {
+  display: block;
+  box-align: center;
 }
 
 img {
-  text-align: center;
-  margin-top: 50%;
+  size: 50%;
+  margin: 0 auto;
 }
 
-h1 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 35px;
-  color: #009688;
-}
-
-.sub {
-  text-align: center;
+@media screen and (min-width: 670px)
+{
+    opacity: 1;
 }
