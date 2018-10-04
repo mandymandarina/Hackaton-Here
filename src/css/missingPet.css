@@ -1,0 +1,67 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Funcionalidad Aparecer y Desaparecer */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Navbar styles */
+.nav-wrapper {
+  background-color: #009688;
+}
+
+.nav-wrapper > ul > li > a {
+  color: #243141;
+  font-weight: bold;
+}
+
+.sidenav {
+  background-color: #243141;
+}
+
+.sidenav > li > a {
+  color: #fafafa;
+}
+
+#containerForLogo > a > img {
+  padding: 2px;
+  background-color: #2B3747;
+  size: 50px;
+}
+
+.nav-wrapper .brand-logo img {
+  height: 50px;
+}
+
+.sidenav .brand-logo img {
+  height: 200px;
+}
+
+.navLogo {
+  margin-left: 20rem;
+}
+
+@media (max-width: 600px) {
+  .navbar-material .nav-wrapper .brand-logo img {
+    height: 2px;
+  }
+}
+
+/* Missing Pet Section */
+.btn-custom {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counter-span {
+  text-align: right;
+}
+
+

@@ -1,13 +1,12 @@
 //let secure = (location.protocol === 'https:') ? true : false;
 let platform = new H.service.Platform({ //aqui se iniciliza el mapa
   useHTTPS: true ,
-  app_id:' 7ruK6i4yX7FUmmecHtyw', // // <- INGRESA TU IDENTIFICACIÓN DE LA APLICACIÓN AQUÍ
+  app_id:'7ruK6i4yX7FUmmecHtyw', // // <- INGRESA TU IDENTIFICACIÓN DE LA APLICACIÓN AQUÍ
   app_code:'Kfxkypo1SzkZogn5nO4eag', // <- INGRESA TU APLICACIÓN CÓDIGO AQUÍ
 });
 
 let defaultLayers = platform.createDefaultLayers();
 let mapPlaceholder = document.getElementById('mapContainer');
-var targetElement = document.getElementById('mapContainer');
 
 //el mapa reacciona correctamente cuando se cambie el tamaño de la ventana
 window.addEventListener('resize', function(){
@@ -49,6 +48,7 @@ function updatePosition (event) {
 
 navigator.geolocation.watchPosition(updatePosition);
 
+/*
 function getDestinationLocation() {
   var endLocation = document.getElementById("inputGroupSelect02");
   return endLocation;
@@ -134,3 +134,4 @@ router.calculateRoute(routingParameters, onResult,
     alert(error.message);
   });
 }
+*/
