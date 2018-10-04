@@ -10,21 +10,32 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./map/mapv/cssv/mapv.css">
+
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
+  <title>Inicio</title>
 </head>
 
 <body>
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/Animals-Icon.png"></li>
+      <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/logodosvetpet.png"></li>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Perfil</a></li>
         <li><a href="#">Denuncias SOS</a></li>
-        <li><a href="#">Mascota Extraviada</a></li>
+        <li><a href="./missingPet.html">Mascota Extraviada</a></li>
         <li><a href="http://www.teprotejo.cl/">Pet Friendly</a></li>
-        <li><a onclick="logout()" href="#">Logout</a></li>
+        <li><a onclick="logout()" href="./mainVisitor.html">Logout</a></li>
 
       </ul>
     </div>
@@ -34,11 +45,11 @@
     <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/logounovoicepet.png"></li>
     <li><a href="#">PERFIL</a></li>
     <li><a href="#">DENUNCIAS SOS</a></li>
-    <li><a href="#">MASCOTA EXTRAVIADA</a></li>
+    <li><a href="./missingPet.html">MASCOTA EXTRAVIADA</a></li>
     <li><a href="http://www.teprotejo.cl/">PET FRIENDLY</a></li>
     <div class="divider"></div>
     <li><a href="#">CONFIGURACIÓN</a></li>
-    <li><a onclick="logout()" href="#">CERRAR SESIÓN</a></li>
+    <li><a onclick="logout()" href="./mainVisitor.html">CERRAR SESIÓN</a></li>
   </ul>
 
   <!-- Main Page -->
@@ -68,7 +79,22 @@
         </form>
       </div>
       <!-- MAP GOES HERE!!! -->
-      <div id="mapContainer"></div>
+      <div class="ctrl-panel">
+        <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
+        <div class="form-group">
+          <label for="destination">Lo que buscas</label>
+          <select id="destination" onchange="route()">
+            <option value="">Busca aqui</option>
+            <option value="Av. Recoleta 3552, Recoleta">veterinarias</option>
+            <option value="French 2673, Recoleta">Petshop</option>
+            <option value="Río de La Plata 1229, Las Condes">Fundaciones</option>
+          </select>
+        </div>
+        <div>
+          <p id="direccion">Dirección:</p>
+        </div>
+      </div>
+      <div style="width:100%; height: 300px" id="mapContainer"></div>
     </section>
   </div>
 
@@ -81,8 +107,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
   <script src="./js/main.js"></script>
-  <script src="./map/mapu/js/mapu.js"></script>
+  <script src="./map/mapv/jsv/mainmapv.js"></script>
+  <script src="./map/mapv/jsv/mapv.js"></script>
   <script src="./js/jquery.js"></script>
 </body>
 
