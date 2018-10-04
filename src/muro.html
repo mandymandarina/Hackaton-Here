@@ -22,7 +22,6 @@
       <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="./img/logodosvetpet.png"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Perfil</a></li>
         <li><a href="./muro.html">Muro Denuncias SOS</a></li>
         <li><a href="./missingPet.html">Mascota Extraviada</a></li>
         <li><a href="./petfriendly.html">Locales Pet Friendly</a></li>
@@ -34,35 +33,30 @@
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
     <li class="brand-logo center" id="containerForLogo"><img src="./img/logounovoicepet.png"></li>
-    <li><a href="#">PERFIL</a></li>
     <li><a href="./muro.html">MURO DENUNCIAS SOS</a></li>
     <li><a href="./missingPet.html">MASCOTA EXTRAVIADA</a></li>
-    <li><a href="#">LOCALES PET FRIENDLY</a></li>
+    <li><a href="./petfriendly.html">LOCALES PET FRIENDLY</a></li>
     <li><a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a></li>
     <div class="divider"></div>
     <li><a onclick="logout()" href="./mainVisitor.html">CERRAR SESIÓN</a></li>
   </ul>
 
-      <!-- textarea para post -->
-      <div class="container">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="name" type="text" class="validate">
-              <label for="email">Nombre</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
-            </div>
-            <div class="input-field col s12">
-              <input id="comment" type="text" class="validate">
-              <label for="email">Publicación</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
-            </div>
-            <button type="button" class="btn btn-danger btnGreen" onclick="saveComment()">Publicar</button>            
-          </div>
-        </form>
+  <!-- textarea para post -->
+  <div class="container">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="email">Nombre</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
+        </div>
+        <div class="input-field col s12">
+          <input id="comment" type="text" class="validate">
+          <label for="email">Publicación</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
+        </div>
+        <button type="button" class="btn btn-danger btnGreen" onclick="saveComment()">Publicar</button>
       </div>
-      </div>
-        
     </form>
   </div>
   <!-- Donde aparecen los post -->
@@ -72,11 +66,11 @@
       <div id="contComment"></div>
     </div>
     <div class="row">
-        <div class="col-12">
-          <span class="textComment">
-          </span>
-        </div>
+      <div class="col-12">
+        <span class="textComment">
+        </span>
       </div>
+    </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -87,14 +81,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./map/mapu/js/mapu.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();
     });
   </script>
   <!-- Vinculacion firebase -->
-
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
   <script>
     // Initialize Firebase
