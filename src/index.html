@@ -1,90 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Voice-Pet</title>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="nav-wrapper">
-      <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Perfil</a></li>
-        <li><a href="#">Denuncias SOS</a></li>
-        <li><a href="#">Mascota Extraviada</a></li>
-        <li><a href="http://www.teprotejo.cl/">Pet Friendly</a></li>
-        <li><a onclick="logout()" href="#">Logout</a></li>
-
-      </ul>
-    </div>
-  </nav>
-  <!-- Sidenav -->
-  <ul class="sidenav" id="mobile-demo">
-    <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
-    <li><a href="#">PERFIL</a></li>
-    <li><a href="#">DENUNCIAS SOS</a></li>
-    <li><a href="#">MASCOTA EXTRAVIADA</a></li>
-    <li><a href="http://www.teprotejo.cl/">PET FRIENDLY</a></li>
-    <div class="divider"></div>
-    <li><a href="#">CONFIGURACIÓN</a></li>
-    <li><a onclick="logout()" href="#">CERRAR SESIÓN</a></li>
-  </ul>
-
-  <!-- Main Page -->
-  <div id="mainPage" class="container">
-    <section>
-      <h5>Encuentra lo que necesitas</h5>
-      <div>
-        <form id="mainCheckboxes" action="#">
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Veterinarias</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Refugios</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Tiendas Pet</span>
-            </label>
-          </p>
-        </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+  <img src="../../assets/img/logounovoicepet.png"/>
       </div>
-      <!-- MAP GOES HERE!!! -->
-      <div id="mapContainer"></div>
-    </section>
-  </div>
-
-  <!--Sidenav JavaScript at end of body for optimized loading-->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      M.AutoInit();
-    });
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./map/mapu/js/mapu.js"></script>
-  <script src="./js/jquery.js"></script>
+</div>
+<div class="row">
+  <div class="col-12 sub">  
+  <h1 class="subtitle">"Animals as people"</h1>
+</div>
+</div>
+</div>
+<!--<script src="splash.js"></script> -->
 </body>
-
 </html>
