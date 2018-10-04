@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./css/petfriendly.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -16,52 +19,25 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="./mainVisitor.html" class="brand-logo">Voice Pet
-        <img src="../assets/img/logodosvetpet.png">
-      </a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-        <i class="material-icons">menu</i>
-      </a>
+      <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="./img/logodosvetpet.png"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li>
-          <a href="./muro.html">Muro Denuncias SOS</a>
-        </li>
-        <li>
-          <a href="./missingPet.html">Mascota Extraviada</a>
-        </li>
-        <li>
-          <a href="./petfriendly.html">Locales Pet Friendly</a>
-        </li>
-        <li>
-          <a href="http://www.teprotejo.cl/">Mundo Cruelty Free</a>
-        </li>
-        <li>
-          <a onclick="logout()" href="./mainVisitor.html">Logout</a>
-        </li>
+        <li><a href="./registro.html">Registrate</a></li>
+        <li><a href="./petfriendly.html">Locales Pet Friendly</a></li>
+        <li><a href="http://www.teprotejo.cl/">Mundo Cruelty Free</a></li>
+        <li><a href="https://www.facebook.com/TeProtejo/"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://www.instagram.com/teprotejo/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/TeProtejo"><i class="fab fa-twitter"></i></a></li>
       </ul>
     </div>
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li class="brand-logo center" id="containerForLogo">
-      <img src="../assets/img/logounovoicepet.png">
-    </li>
-    <li>
-      <a href="./muro.html">MURO DENUNCIAS SOS</a>
-    </li>
-    <li>
-      <a href="./missingPet.html">MASCOTA EXTRAVIADA</a>
-    </li>
-    <li>
-      <a href="./petfriendly.html">LOCALES PET FRIENDLY</a>
-    </li>
-    <li>
-      <a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a>
-    </li>
+    <li class="brand-logo center" id="containerForLogo"><img src="./img/logounovoicepet.png"></li>
+    <li><a href="./petfriendly.html">LOCALES PET FRIENDLY</a></li>
+    <li><a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a></li>
     <div class="divider"></div>
-    <li>
-      <a onclick="logout()" href="./mainVisitor.html">CERRAR SESIÓN</a>
-    </li>
+    <li><a href="./registro.html">REGISTRATE</a></li>
   </ul>
 
   <!-- Missing Pet Section -->
@@ -152,6 +128,11 @@
     </section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
 
 </body>
 
