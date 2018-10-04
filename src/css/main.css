@@ -1,6 +1,8 @@
 body {
   height: 100vh;
   width: 100vw;
+  background-image: url('../../assets/img/fondopies.png');
+  background-size: cover;
 }
 
 /* Funcionalidad Aparecer y Desaparecer */
@@ -42,6 +44,16 @@ body {
 
 .sidenav .brand-logo img {
   height: 200px;
+}
+
+/*Main Page*/
+#mainCheckboxes > p > label > input span {
+  display: inline;
+}
+
+form {
+  -webkit-border-radius: 10px 10px;
+  background-color: white;
 }
 
 @media (max-width: 600px) {
