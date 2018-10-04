@@ -8,7 +8,7 @@ function registerWithFirebase(){
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario creado con éxito");
-            location.href ='muro.html';
+            location.href ="./main.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -26,7 +26,7 @@ function loginWithFirebase(){
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario inició sesión con éxito");
-            location.href ="../../muro.html";
+            location.href ="./main.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -40,52 +40,54 @@ function loginFacebook() {
 
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        var token = result.credential.accessToken;
+        let token = result.credential.accessToken;
         console.log(token);
         // The signed-in user info.
-        var user = result.user;
+        let user = result.user;
         console.log(user);
         // ...
       }).catch(function(error) {
         // Handle Errors here.
-        var errorCode = error.code;
+        let errorCode = error.code;
         console.log(errorCode);
-        var errorMessage = error.message;
+        let errorMessage = error.message;
         console.log(errorMessage);
         // The email of the user's account used.
-        var email = error.email;
+        let email = error.email;
         console.log(email);
         // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
+        let credential = error.credential;
         console.log(credential);
         // ...
       });
 }
 
 function loginGoogle() {
-    const authService = firebase.auth();
+    const provider = new firebase.auth.GoogleAuthProvider();
 
-    // manejador de eventos para loguearse
-document.getElementById('logeoGoogle').addEventListener('click', function() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope('email');
-    authService.signInWithPopup(provider)
-          .then(function(result) {
-              // logueado con éxito
-              console.log('Hemos autenticado al usuario ', result.user);
-              location.href = "../../src/muro.html";
-          })
-          .catch(function(error) {
-              // Fallo de login
-              console.log('Se ha encontrado un error:', error);
-          });
-  });
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        let token = result.credential.accessToken;
+        // The signed-in user info.
+        let user = result.user;
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        // The email of the user's account used.
+        let email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        let credential = error.credential;
+        // ...
+      });
 }
 
 function logout() {
-    const authService = firebase.auth();
-    // manejador de eventos para cerrar sesión (logout)
-document.getElementById('botonlogout').addEventListener('click', function() {
-    authService.signOut();
-  });
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        location.href ="../inicio.html";
+      }).catch(function(error) {
+        // An error happened.
+      });
 }

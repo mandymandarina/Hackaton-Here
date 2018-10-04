@@ -1,7 +1,6 @@
 body {
-    background-image: url('../Login/img/pngpata.jpg');
+    background-image: url('../img/fondopiesopaco.png');
     background-size: cover; 
-    image-orientation: center;
 }
 
 img {
@@ -17,9 +16,18 @@ button {
     padding: 10px;
 }
 
+.content {
+    -webkit-border-radius: 10px 10px;
+    background-color: white; 
+    size: 50%;
+    box-sizing: content-box;    
+}
+
 .container {
     -webkit-border-radius: 10px 10px;
     background-color: white; 
+    size: 60%;
+    padding: 3%;
 }
 
 @media screen and (min-width: 670px)

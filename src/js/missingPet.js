@@ -1,5 +1,5 @@
 /* Functionality Buttons */
-document.getElementById('start-missing-btn').addEventListener('click', () => {
+document.getElementById('btnData').addEventListener('click', () => {
   missingPetStart.classList.add('hide');
   missingPetStart.classList.remove('show');
   missingPetMap.classList.remove('hide');
@@ -21,5 +21,17 @@ document.getElementById('form-missing-btn').addEventListener('click', () => {
 });
 
 document.getElementById('photo-missing-btn').addEventListener('click', () => {
-  window.open('../index.html', '_self', 'true');
+  window.open('../main.html', '_self', 'true');
 });
+
+let petName;
+let petMissingDate;
+let petFeatures;
+
+/* Save info to DB */
+function saveToDB() {
+  petName = document.getElementById('pet_name');
+  petMissingDate = document.getElementById('pet_missing');
+  petFeatures = document.getElementById('pet_features');
+  return console.log(petName, petMissingDate, petFeatures);
+}
