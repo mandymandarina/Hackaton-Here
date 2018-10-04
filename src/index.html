@@ -17,26 +17,28 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><span class="black-text">Voice Pet</span></a>
+      <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Perfil</a></li>
         <li><a href="#">Denuncias SOS</a></li>
         <li><a href="#">Mascota Extraviada</a></li>
-        <li><a href="#">Pet Friendly</a></li>
+        <li><a href="http://www.teprotejo.cl/">Pet Friendly</a></li>
+        <li><a onclick="logout()" href="#">Logout</a></li>
+
       </ul>
     </div>
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li id="containerForLogo"><a href="#">LOGO</a></li>
+    <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
     <li><a href="#">PERFIL</a></li>
     <li><a href="#">DENUNCIAS SOS</a></li>
     <li><a href="#">MASCOTA EXTRAVIADA</a></li>
-    <li><a href="#">PET FRIENDLY</a></li>
+    <li><a href="http://www.teprotejo.cl/">PET FRIENDLY</a></li>
     <div class="divider"></div>
     <li><a href="#">CONFIGURACIÓN</a></li>
-    <li><a href="#">CERRAR SESIÓN</a></li>
+    <li><a onclick="logout()" href="#">CERRAR SESIÓN</a></li>
   </ul>
 
   <!-- Main Page -->

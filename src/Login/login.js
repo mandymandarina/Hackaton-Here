@@ -8,7 +8,7 @@ function registerWithFirebase(){
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario creado con éxito");
-            location.href ="";
+            location.href ="../muro.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -26,7 +26,7 @@ function loginWithFirebase(){
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario inició sesión con éxito");
-            location.href ="";
+            location.href ="../muro.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -38,13 +38,6 @@ function loginWithFirebase(){
 function loginFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
 
-   /* firebase.auth().signInWithPopup(provider).then(function(result){
-        alert("Exito");
-        console.log(result);
-    }).catch(function(error){
-        alert("Error");
-        console.log(error);
-    }); */
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
@@ -80,6 +73,7 @@ document.getElementById('logeoGoogle').addEventListener('click', function() {
           .then(function(result) {
               // logueado con éxito
               console.log('Hemos autenticado al usuario ', result.user);
+              location.href = "../muro.html";
           })
           .catch(function(error) {
               // Fallo de login
