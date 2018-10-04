@@ -60,7 +60,7 @@ function loginGoogle() {
         // ...
       }).then(() => {
         console.log('Usuario logueado correctamente');
-        window.open('./muro.html', '_self', 'true');
+        window.open('./main.html', '_self', 'true');
       }).catch(function(error) {
         // Handle Errors here.
         let errorCode = error.code;
