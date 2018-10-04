@@ -1,7 +1,6 @@
 body {
     background-image: url('../Login/img/pngpata.jpg');
     background-size: cover; 
-    image-orientation: center;
 }
 
 img {
@@ -20,6 +19,7 @@ button {
 .container {
     -webkit-border-radius: 10px 10px;
     background-color: white; 
+    size: 70%;
 }
 
 @media screen and (min-width: 670px)

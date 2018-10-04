@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./src//css/index.css">
     <title>Muro</title>
 
 </head>
@@ -46,7 +45,9 @@
       </ul>
 
       <!-- textarea para post -->
+      <br>
       <div class="row">
+        <div class="container">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
@@ -59,18 +60,15 @@
               <label for="email">Publicación</label>
               <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
             </div>
+            <button class="waves-effect waves-light btn" type="submit" name="action" onclick="loginWithFirebase()">Login
+                <i class="material-icons right">send</i></button> <br>
           </div>
         </form>
       </div>
+      </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../src/map/mapu/js/app.js"></script>
-    <script src="../src/map/mapu/js/main.js"></script>
+<script src="/src/Login/login.css"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
