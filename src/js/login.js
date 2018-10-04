@@ -38,27 +38,14 @@ function loginWithFirebase(){
 function loginFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
 
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        let token = result.credential.accessToken;
-        console.log(token);
-        // The signed-in user info.
-        let user = result.user;
-        console.log(user);
-        // ...
-      }).catch(function(error) {
-        // Handle Errors here.
-        let errorCode = error.code;
-        console.log(errorCode);
-        let errorMessage = error.message;
-        console.log(errorMessage);
-        // The email of the user's account used.
-        let email = error.email;
-        console.log(email);
-        // The firebase.auth.AuthCredential type that was used.
-        let credential = error.credential;
-        console.log(credential);
-        // ...
+    firebase.auth().signInWithPopup(provider)
+    .then(() => {
+        console.log('Usuario logueado correctamente');
+        window.open('./main.html', '_self', 'true');
+      })
+      .catch((error) => {
+        console.log('Error de Firebase: ' + error.code);
+        console.log('Mensaje de error de Firebase: ' + error.message);
       });
 }
 
@@ -71,6 +58,9 @@ function loginGoogle() {
         // The signed-in user info.
         let user = result.user;
         // ...
+      }).then(() => {
+        console.log('Usuario logueado correctamente');
+        window.open('./muro.html', '_self', 'true');
       }).catch(function(error) {
         // Handle Errors here.
         let errorCode = error.code;
@@ -86,7 +76,7 @@ function loginGoogle() {
 function logout() {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        location.href ="../inicio.html";
+        location.href ="mainVisitor.html";
       }).catch(function(error) {
         // An error happened.
       });
