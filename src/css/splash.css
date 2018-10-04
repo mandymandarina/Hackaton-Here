@@ -1,20 +1,16 @@
 body {
-  background-image: url("../../assets/img/fondopies.png");
+  background-image: url("../../assets/img/fondopiesopaco.png");
   background-size: cover;
-  filter:  alpha(opacity=50);
-}
-
-.container {
-  display: block;
-  box-align: center;
 }
 
 img {
-  size: 50%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 @media screen and (min-width: 670px)
 {
     opacity: 1;
+    img {
+      size: 50%;
+    }
 }
