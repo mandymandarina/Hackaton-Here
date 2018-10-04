@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/petfriendly.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/missingPet.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="./mainVisitor.html" class="brand-logo">Voice Pet
+                <img src="../assets/img/logodosvetpet.png">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#">Perfil</a>
+                </li>
+                <li>
+                    <a href="./muro.html">Denuncias SOS</a>
+                </li>
+                <li>
+                    <a href="./missingPet.html">Mascota Extraviada</a>
+                </li>
+                <li>
+                    <a href="#">Locales Pet Friendly</a>
+                </li>
+                <li>
+                    <a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a>
+                </li>
+                <li>
+                    <a onclick="logout()" href="./mainVisitor.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li class="brand-logo center" id="containerForLogo">
+            <img src="../assets/img/logounovoicepet.png">
+        </li>
+        <li>
+            <a href="#">PERFIL</a>
+        </li>
+        <li>
+            <a href="./muro.html">DENUNCIAS SOS</a>
+        </li>
+        <li>
+            <a href="./missingPet.html">MASCOTA EXTRAVIADA</a>
+        </li>
+        <li>
+            <a href="#">LOCALES PET FRIENDLY</a>
+        </li>
+        <li>
+            <a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a onclick="logout()" href="./mainVisitor.html">CERRAR SESIÓN</a>
+        </li>
+    </ul>
+
+    <!-- Missing Pet Section -->
+    <div id="missingPetStart" class="container show">
+        <section class="petOne">
+            <div class="row">
+                <div class="col s12">
+                    <h5>Pet Friendly</h5>
+                    <p>Estos son los lugares asociados a VoicePet que te permiten pasar un momento agradable con tu mascota.¡Visitalos!</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/img/El-Camino-5.jpg">
+                            <span class="card-title">El Camino BBQ</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Desde que abrió sus puertas en 2015, que a su entretenido patio de arenilla, con mesas y sillas
+                                tipo camping, se puede ingresar con perros día y noche. Ahí puede dejarlos sueltos y nadie
+                                le reclamará si uno de ellos se pasea por las mesas mientras los demás comensales disfrutan
+                                de sus platos.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://www.elcaminobbq.com/">Conócelo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/img/lagatahoracia.jpg">
+                            <span class="card-title">La gata Horacia</span>
+                        </div>
+                        <div class="card-content">
+                            <p>La Gata Horacia, es un centro donde se realizan muchas actividades, entre ellas el Yoga, todo
+                                esto se puede disfrutar en compañía de los anfitriones de la casa que son los gatos. Los
+                                felinos son rescatados por Fundación Adopta, donde pueden compartir con las personas y a
+                                la vez ser adoptados.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.lagatahoracia.cl/">Conócelo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/img/dachshundcoffe.jpg">
+                            <span class="card-title">Conócelo</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Dachshund Coffee fue creado como una cafetería pensada especialmente para perros, tanto así que
+                                tienen una carta para ellos donde pueden encontrar alimentos para las distintas dietas y
+                                necesidades de cada uno.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.dachshundcoffee.cl/">Conócelo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/img/antiguo-sueño.jpg">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Este restaurant es increíble en ambiente, son todos super amables, tienen una tienda de antiguedades
+                                y dejan entrar a los perrunos adentro. Tienen helados artesanales y comida vegana.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://www.tripadvisor.cl/Restaurant_Review-g303680-d7075704-Reviews-Sueno_Antiguo-San_Jose_de_Maipo_Santiago_Metropolitan_Region.html">Conócelo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
