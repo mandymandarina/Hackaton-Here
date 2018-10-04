@@ -1,7 +1,3 @@
-const containerTitle = document.getElementById('title');
-const containerDireccion = document.getElementById('direccion');
-const containerHorario = document.getElementById('horario');
-
 btnData.addEventListener('click', () => {
   const ubication = `https://places.cit.api.here.com/places/v1/discover/search?app_id=7ruK6i4yX7FUmmecHtyw&app_code=Kfxkypo1SzkZogn5nO4eag&at=${HEREHQcoordinates.lat},${HEREHQcoordinates.lng}&q=${inputGroupSelect02.value}&pretty`
   fetch(ubication)

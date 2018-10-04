@@ -1,0 +1,23 @@
+.form-control{
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 20%;
+  text-align: center;
+  height: 25vh;
+  border-width: 0.2em;
+  border-color:black;
+}
+.btn-danger{
+  border-radius: 4px;  
+  margin-top:5%;
+  margin-left: 50%;
+}
+.comment{
+  margin-top:5%;
+  margin-left: 5%;
+}
+
+.btnGreen{
+  background-color: green;
+  border-color: green;
+}
