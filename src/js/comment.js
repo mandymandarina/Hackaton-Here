@@ -1,3 +1,12 @@
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    saveComment();
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
+
 // para guardar la data del comment
 function saveComment() {
   const commentPlace = comment.value;
@@ -10,7 +19,7 @@ function saveComment() {
     const newMessageKey = firebase.database().ref().child('comments').push().key;
     firebase.database().ref(`comments/${newMessageKey}`).set({
       //creator: currentUser.uid,
-      creatorName: currentUser,
+      //creatorName: currentUser,
       text: commentPlace,
       //email: currentUser.email,
     });
@@ -20,25 +29,6 @@ function saveComment() {
   
 }
 
-function saveName() {
-  const commentPlace = name.value;
-  if (commentName === '') {    
-    // Limpiar el textarea
-    document.getElementById('name').value = '';
-  } else {
-    const currentUser = firebase.auth().currentUser;
-    const commentName = comment.value;
-    const newMessageKey = firebase.database().ref().child('comments').push().key;
-    firebase.database().ref(`comments/${newMessageKey}`).set({
-      //creator: currentUser.uid,
-      //creatorName: currentUser,
-      nombre: commentName,
-      //email: currentUser.email,
-    });
-    // Limpiar el textarea
-    document.getElementById('name').value = '';    
-  }
-}
 
 
 // Buscar mensajes desde data
@@ -46,7 +36,7 @@ firebase.database().ref('comments').on('child_added', (newMessage)=> {
   let modiText = newMessage.val().text; 
   contComment.innerHTML += `<section class="enterComments" id="seccionPrincipal" data-idEdit='${newMessage.key}'>  
   
-  <div class= "row photoUserComment"><img class="photouser" src ="icono/perfil-usuario.svg"> ${newMessage.val().creatorName}</div>
+  <div class= "row photoUserComment"><img class="photouser" src ="./img/yo.jpeg">Ana Costa</div>
 
   <div class= "row textComment">    
       ${newMessage.val().text}    
