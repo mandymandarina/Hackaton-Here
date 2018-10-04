@@ -36,7 +36,7 @@ firebase.database().ref('comments').on('child_added', (newMessage)=> {
   let modiText = newMessage.val().text; 
   contComment.innerHTML += `<section class="enterComments" id="seccionPrincipal" data-idEdit='${newMessage.key}'>  
   
-  <div class= "row photoUserComment"><img class="photouser" src ="./img/yo.jpeg">Ana Costa</div>
+  <div class= "row photoUserComment"><img class="photouser" src ="./img/personapequeña.jpg" style="width:30px; border-radius:8px"; >Ana Costa</div>
 
   <div class= "row textComment">    
       ${newMessage.val().text}    
