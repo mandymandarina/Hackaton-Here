@@ -1,0 +1,13 @@
+.petOne {
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color:white;
+}
+
+.card .card-action {
+background-color: #009688;
+}
