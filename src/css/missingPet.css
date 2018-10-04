@@ -61,7 +61,37 @@ body {
 }
 
 .counter-span {
+  text-align: left;
+}
+
+h5 {
+  text-align: center;
+}
+
+.reportarMascota {
+  text-align: center;
+}
+
+#map-missing-btn {
+  text-align: center;
+} 
+
+.paso {
   text-align: right;
 }
 
+.waves-effect {
+  text-align: center;
+}
 
+.explorar{
+  text-align: center;
+}
+
+/* 
+@media (max-width: 600px) {
+  .perrito {
+    display: none;
+  }
+}
+ */ 

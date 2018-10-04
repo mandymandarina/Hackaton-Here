@@ -21,7 +21,7 @@ document.getElementById('form-missing-btn').addEventListener('click', () => {
 });
 
 document.getElementById('photo-missing-btn').addEventListener('click', () => {
-  window.open('../main.html', '_self', 'true');
+  window.open('./main.html', '_self', 'true');
 });
 
 let petName;

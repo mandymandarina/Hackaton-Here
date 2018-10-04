@@ -1,37 +1,46 @@
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    saveComment();
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
+
 // para guardar la data del comment
 function saveComment() {
   const commentPlace = comment.value;
-  if (commentPlace === '') {
-    errorTxt.innerHTML = '<div class="alert alert-danger alertConteiner" role="alert" id="errorTxt"> Error: Debes ingresar un comentarios </div>';
+  if (commentPlace === '') {    
     // Limpiar el textarea
     document.getElementById('comment').value = '';
   } else {
     const currentUser = firebase.auth().currentUser;
-    const commentPost = comment.value;
+    const commentPlace = comment.value;
     const newMessageKey = firebase.database().ref().child('comments').push().key;
     firebase.database().ref(`comments/${newMessageKey}`).set({
       //creator: currentUser.uid,
-      //creatorName: currentUser.displayName || currentUser.email,
+      //creatorName: currentUser,
       text: commentPlace,
       //email: currentUser.email,
     });
     // Limpiar el textarea
     document.getElementById('comment').value = '';    
   }
+  
 }
+
+
 
 // Buscar mensajes desde data
 firebase.database().ref('comments').on('child_added', (newMessage)=> {  
   let modiText = newMessage.val().text; 
   contComment.innerHTML += `<section class="enterComments" id="seccionPrincipal" data-idEdit='${newMessage.key}'>  
   
-  <div class= "row photoUserComment"><img class="photouser" src ="icono/perfil-usuario.svg"> ${newMessage.val().creatorName}</div>
+  <div class= "row photoUserComment"><img class="photouser" src ="./img/personapequeña.jpg" style="width:30px; border-radius:8px"; >Ana Costa</div>
 
-  <div class= "row textComment">
-    <div class= "textInsert"> <input type="text" class="contEdit inputEdit" name="contEdit" data-editcon="${newMessage.val().text}" value="${modiText}">
-      ${newMessage.val().text}               
-    
-    <i class="fas fa-pencil-alt" data-edit="${newMessage.val().text}" onclick ="editPost(event)"></i> <i class="fas fa-trash" data-id="${newMessage.key}" onclick="preguntar()"></i>
+  <div class= "row textComment">    
+      ${newMessage.val().text}    
+    <i class="fas fa-trash" data-id="${newMessage.key}" onclick="preguntar()"></i>
   </div>                            
   </section>`;
 });
@@ -61,9 +70,10 @@ function deleteButtonClicked() {
   commentRef.remove();  
 }*/
 
+//funcion editar
 function editPost(event) {
   event.stopPropagation();
-  let contenidoEdit = document.getElementsByClassName('inputEdit')[0].classList.add('contEditar');
+  let contenidoEdit = document.getElementsByClassName('inputEdit')[0].classList.add('contEdit');
   contenidoEdit = document.getElementsByClassName('inputEdit')[0].classList.remove('contEdit');
   // contenidoEdit.style.display = 'block';
   let contenido = document.getElementsByClassName('inputEdit')[0];
@@ -80,8 +90,10 @@ function editPost(event) {
         text: menEdit,
       });
       //contComment.style.display='none';
-      seccionPrincipal.innerHTML = '<section></section>';
+      //seccionPrincipal.innerHTML = '<section></section>';
     });
     console.log(editar);
   });
 }
+
+

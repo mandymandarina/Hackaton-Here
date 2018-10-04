@@ -16,5 +16,10 @@ btnData.addEventListener('click', () => {
 
 const renderInfo = (data) => {
   contenedorData.innerHTML += `<p class="descriptionFodd"> Nombre Local: ${JSON.stringify(data.results.items[0].title)}
-  Dirección: ${JSON.stringify(data.results.items[0].vicinity)} Calificación: ${JSON.stringify(data.results.items[0].averageRating)}</p>`;
+  Dirección: ${JSON.stringify(data.results.items[0].vicinity)} Calificación: ${JSON.stringify(data.results.items[0].averageRating)}</p>
+  <p class="descriptionFodd1"> Nombre Local: ${JSON.stringify(data.results.items[1].title)}
+  Dirección: ${JSON.stringify(data.results.items[1].vicinity)} Calificación: ${JSON.stringify(data.results.items[1].averageRating)}</p>
+  <p class="descriptionFodd1"> Nombre Local: ${JSON.stringify(data.results.items[2].title)}
+  Dirección: ${JSON.stringify(data.results.items[2].vicinity)} Calificación: ${JSON.stringify(data.results.items[2].averageRating)}</p>
+  `;
 }

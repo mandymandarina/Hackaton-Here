@@ -15,8 +15,8 @@ window.addEventListener('resize', function(){
 
 //coordenadas
 var coordinates = {
-  lat: -33.43727, // ubicacio de santiago de chile
-  lng: -70.65056
+  lat: -33.45, // ubicacio de santiago de chile
+  lng: -70.6667
 };
 let mapOptions = {
   center: coordinates,

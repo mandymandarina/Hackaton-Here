@@ -19,59 +19,96 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="../assets/img/logodosvetpet.png"></a>
+      <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="./img/logodosvetpet.png"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Perfil</a></li>
-        <li><a href="./muro.html">Denuncias SOS</a></li>
+        <li><a href="./muro.html">Muro Denuncias SOS</a></li>
         <li><a href="./missingPet.html">Mascota Extraviada</a></li>
-        <li><a href="#">Locales Pet Friendly</a></li>
-        <li><a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a></li>
+        <li><a href="./petfriendly.html">Locales Pet Friendly</a></li>
+        <li><a href="http://www.teprotejo.cl/">Mundo Cruelty Free</a></li>
         <li><a onclick="logout()" href="./mainVisitor.html">Logout</a></li>
       </ul>
     </div>
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/logounovoicepet.png"></li>
-    <li><a href="#">PERFIL</a></li>
-    <li><a href="./muro.html">DENUNCIAS SOS</a></li>
+    <li class="brand-logo center" id="containerForLogo"><img src="./img/logounovoicepet.png"></li>
+    <li><a href="./muro.html">MURO DENUNCIAS SOS</a></li>
     <li><a href="./missingPet.html">MASCOTA EXTRAVIADA</a></li>
-    <li><a href="#">LOCALES PET FRIENDLY</a></li>
+    <li><a href="./petfriendly.html">LOCALES PET FRIENDLY</a></li>
     <li><a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a></li>
     <div class="divider"></div>
     <li><a onclick="logout()" href="./mainVisitor.html">CERRAR SESIÓN</a></li>
   </ul>
 
-      <!-- textarea para post -->
-      <br>
+  <!-- textarea para post -->
+  <div class="container">
+    <form class="col s12">
       <div class="row">
-        <div class="container">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="name" type="text" class="validate">
-              <label for="email">Nombre</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
-            </div>
-            <div class="input-field col s12">
-              <input id="post" type="text" class="validate">
-              <label for="email">Publicación</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
-            </div>
-            <button class="waves-effect waves-light btn" type="submit" name="action" onclick="loginWithFirebase()">Login
-                <i class="material-icons right">send</i></button> <br>
-          </div>
-        </form>
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="email">Nombre</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Nombre</span>
+        </div>
+        <div class="input-field col s12">
+          <input id="comment" type="text" class="validate">
+          <label for="email">Publicación</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Publicación</span>
+        </div>
+        <button type="button" class="btn btn-danger btnGreen" onclick="saveComment()">Publicar</button>
       </div>
+    </form>
+  </div>
+  <!-- Donde aparecen los post -->
+  <section>
+    <div class="comment">
+      <h3>Publicaciones</h3>
+      <div id="contComment"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <span class="textComment">
+        </span>
       </div>
+    </div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./map/mapu/js/mapu.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();
     });
   </script>
+  <!-- Vinculacion firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
+      authDomain: "voice-pet.firebaseapp.com",
+      databaseURL: "https://voice-pet.firebaseio.com",
+      projectId: "voice-pet",
+      storageBucket: "voice-pet.appspot.com",
+      messagingSenderId: "179273412230"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="js/comment.js"></script>
 
 </body>
 

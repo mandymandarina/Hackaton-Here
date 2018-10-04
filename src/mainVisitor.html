@@ -24,15 +24,14 @@
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="../assets/img/logodosvetpet.png"></a>
+      <a href="./mainVisitor.html" class="brand-logo">Voice Pet <img src="./img/logodosvetpet.png"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="./registro.html">Registrate</a></li>
-        <li><a href="#">Locales Pet Friendly</a></li>
+        <li><a href="./petfriendly.html">Locales Pet Friendly</a></li>
         <li><a href="http://www.teprotejo.cl/">Mundo Cruelty Free</a></li>
         <li><a href="https://www.facebook.com/TeProtejo/"><i class="fab fa-facebook-square"></i></a></li>
         <li><a href="https://www.instagram.com/teprotejo/"><i class="fab fa-instagram"></i></a></li>
@@ -42,15 +41,15 @@
   </nav>
   <!-- Sidenav -->
   <ul class="sidenav" id="mobile-demo">
-    <li class="brand-logo center" id="containerForLogo"><img src="../assets/img/logounovoicepet.png"></li>
-    <li><a href="#">LOCALES PET FRIENDLY</a></li>
+    <li class="brand-logo center" id="containerForLogo"><img src="./img/logounovoicepet.png"></li>
+    <li><a href="./petfriendly.html">LOCALES PET FRIENDLY</a></li>
     <li><a href="http://www.teprotejo.cl/">MUNDO CRUELTY FREE</a></li>
     <div class="divider"></div>
     <li><a href="./registro.html">REGISTRATE</a></li>
   </ul>
 
   <!-- Main Page -->
-  <div class="container">
+  <div class="container mainPage">
     <section>
       <h5>Encuentra lo que necesitas</h5>
       <div>
@@ -76,21 +75,17 @@
         </form>
       </div>
       <!-- MAP GOES HERE!!! -->
-      <div class="ctrl-panel">
-        <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
-        <div class="form-group">
-          <label for="destination">Lo que buscas</label>
-          <select id="destination" onchange="route()">
-            <option value="">Busca aqui</option>
-            <option value="Av. Recoleta 3552, Recoleta">veterinarias</option>
-            <option value="French 2673, Recoleta">Petshop</option>
-            <option value="Río de La Plata 1229, Las Condes">Fundaciones</option>
-          </select>
-        </div>
-        <div>
-          <p id="direccion">Dirección:</p>
-        </div>
-      </div>
+      <div class="contSelBtn">  
+        <select class="custom-select" name ="select" id="inputGroupSelect02">
+          <option selected>Busca lo que necesites </option>
+          <option value="Veterinarias">Veterinarias</option>
+          <option value="Petshop">Petshop</option>          
+        </select>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="btnData">
+            <i class="fas fa-search"></i>
+          </button> 
+          </div> 
+          <div id="contenedorData"></div>
       <div style="width:100%; height: 300px" id="mapContainer"></div>
 
     </section>
@@ -103,8 +98,9 @@
   <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./map/mapv/jsv/mainmapv.js"></script>
+  
   <script src="./map/mapv/jsv/mapv.js"></script>
+  <script src="./map/mapv/jsv/mainmapv.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
