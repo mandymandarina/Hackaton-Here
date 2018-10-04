@@ -1,7 +1,8 @@
 body {
+  background-image: url(../../assets/img/fondopies.png);
   height: 100vh;
   width: 100vw;
-  background-image: url('../../assets/img/fondopiesopaco.png');
+  background-image: url('../img/fondopiesopaco.png');
   background-size: cover;
 }
 
@@ -13,7 +14,10 @@ body {
 .show {
   display: block;
 }
-
+.enterComments{
+  background-color: white;
+  border:black;
+}
 /* Navbar styles */
 .nav-wrapper {
   background-color: #009688;
@@ -66,9 +70,13 @@ form {
   }
 }
 
-/*Main Page*/
 #mainCheckboxes > p > label > input span {
   display: inline;
 }
 
-
+.mainPage {
+  background: white;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 10px 10px;
+}
