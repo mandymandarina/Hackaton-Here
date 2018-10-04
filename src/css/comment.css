@@ -1,27 +1,30 @@
-.form-control{
+.form-control {
   width: 50%;
   margin-top: 15%;
   margin-left: 20%;
   text-align: center;
   height: 25vh;
   border-width: 0.2em;
-  border-color:black;
+  border-color: black;
 }
-.btn-danger{
-  border-radius: 4px;  
-  margin-top:5%;
+
+.btn-danger {
+  border-radius: 4px;
+  margin-top: 5%;
   margin-left: 50%;
 }
-.comment{
-  margin-top:5%;
+
+.comment {
+  margin-top: 5%;
   margin-left: 5%;
 }
 
-.btnGreen{
+.btnGreen {
   background-color: green;
   border-color: green;
 }
-.photouser{
-  width: -10%;
-  height: -10%;
+
+.photouser {
+  width: 30px;
+  height: 70px;
 }
