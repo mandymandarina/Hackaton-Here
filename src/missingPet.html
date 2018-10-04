@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voice-Pet</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/missingPet.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><img class="navLogo" src="../assets/img/logodosvetpet.png" alt=""></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Denuncias SOS</a></li>
+        <li><a href="#">Mascota Extraviada</a></li>
+        <li><a href="#">Pet Friendly</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Sidenav -->
+  <ul class="sidenav" id="mobile-demo">
+    <li id="containerForLogo" class="brand-logo center"><img src="../assets/img/logounovoicepet.png" alt=""></li>
+    <li><a href="#">PERFIL</a></li>
+    <li><a href="#">DENUNCIAS SOS</a></li>
+    <li><a href="#">MASCOTA EXTRAVIADA</a></li>
+    <li><a href="#">PET FRIENDLY</a></li>
+    <div class="divider"></div>
+    <li><a href="#">CONFIGURACIÓN</a></li>
+    <li><a href="#">CERRAR SESIÓN</a></li>
+  </ul>
+
+  <!-- Missing Pet Section -->
+  <div id="missingPetStart" class="container show">
+    <section>
+      <h5>Reportar mascota</h5>
+      <p>Nosotros te ayudamos a encontrar a tu mascota en 3 simples pasos:</p>
+      <p>1. Posicionate en el mapa en el lugar que se te ha extraviado.
+        2. Completa el formulario y escribe características que la podrían identificar.
+        3. Sube una fotografía de él/ella.</p>
+      <p>Si algún usuario de la aplicación la encuentra, se comunicará contigo a través del número que nos otorgaste al
+        momento de registrarte</p>
+      <div class="btn-custom">
+        <button id="start-missing-btn" class="btn waves-effect btn-custom">REPORTAR MASCOTA</button>
+      </div>
+      <p>Cuando tu mascota se encuentre ya contigo, elimina el aviso en el <strong>Tablero de anuncios.</strong></p>
+    </section>
+  </div>
+
+  <!-- Missing Pet Map -->
+  <div id="missingPetMap" class="container hide">
+    <section>
+      <h5>Reportar mascota</h5>
+      <span class="counter-span">1/3</span>
+      <p>Selecciona y explora el mapa</p>
+      <!-- MAP GOES HERE!!! -->
+      <div id="mapContainer">INSERTE MAPA AQUÍ</div>
+      <button id="map-missing-btn" class="btn waves-effect">SIGUIENTE</button>
+    </section>
+  </div>
+
+  <!-- Report Missing Pet Section -->
+  <div id="missingPetForm" class="container hide">
+    <section>
+      <h5>Reportar Mascota</h5>
+      <p>Datos de la mascota<span>2/3</span></p>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="pet_name" type="text">
+              <label for="pet_name">Nombre de la mascota</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="pet_missing" type="date" data-length="10">
+              <label for="pet_missing">Fecha de extravío</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="pet_features" class="materialize-textarea" data-length="120"></textarea>
+              <label for="pet_features">Características y comentarios</label>
+            </div>
+          </div>
+        </form>
+        <button id="form-missing-btn" class="btn waves-effect">SIGUIENTE</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Missing Pet Photo -->
+  <div id="missingPetPhoto" class="container hide">
+    <section>
+      <h5>Reportar mascota</h5>
+      <p>Sube una fotografía<span>3/3</span></p>
+      <form action="#">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>Foto</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+      </form>
+      <button id="photo-missing-btn" class="btn waves-effect">REPORTAR MASCOTA</button>
+    </section>
+  </div>
+
+
+  <!--Sidenav JavaScript at end of body for optimized loading-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/missingPet.js"></script>
+  <script src="./map/mapu/js/mapu.js"></script>
+  <script src="./js/jquery.js"></script>
+</body>
+
+</html>

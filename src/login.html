@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+  <title>Voice Pets</title>
+</head>
+
+<body>
+  <div id="logo" class="caption center-align">
+    <img src="../assets/img/Animals-Icon.png">
+  </div>
+
+  <header class="container center" id="titulo">
+    <div class="row">
+      <div class="input-field col s12">
+        <h3><strong>VOICE PET</strong></h3>
+      </div>
+    </div>
+  </header>
+
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">mail_outline</i>
+            <input id="email" type="text" class="validate">
+            <label for="icon_prefix">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">security</i>
+            <input id="password" type="password" class="validate">
+            <label for="icon_telephone">Password</label>
+          </div>
+        </div>
+        <div col-3>
+          <button class="waves-effect waves-light btn" type="submit" name="action" onclick="loginWithFirebase()">Login
+            <i class="material-icons right">send</i></button> <br>
+          <button id="logeoFacebook" class="btn waves-effect  indigo darken-4" type="submit" name="action" onclick="loginFacebook()">
+            <i class="fab fa-facebook-f"></i> FACEBOOK</button>
+          <button id="logeoGoogle" class="btn waves-effect red accent-4" type="submit" name="action" onclick="loginGoogle()">
+            <i class="fab fa-google"></i> GOOGLE</button>
+          <button id="botonlogout" class="waves-effect waves-light btn" type="submit" name="action" onclick="logout()">Logout
+            <i class="material-icons right">send</i></button> <br>
+        </div>
+        <br>
+        <p>¿No tienes Cuenta? <a href="./registro.html">Registrate!</a> </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/login.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD89E9XVp3o6PCR7a1ILszy9ExpcNK_w-Y",
+      authDomain: "voice-pet.firebaseapp.com",
+      databaseURL: "https://voice-pet.firebaseio.com",
+      projectId: "voice-pet",
+      storageBucket: "voice-pet.appspot.com",
+      messagingSenderId: "179273412230"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+</body>
+
+</html>

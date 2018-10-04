@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./map/mapv/cssv/mapv.css">
+
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
+  <title>Inicio</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Voice Pet <img src="Login/img/logodosvetpet.png"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="Registro/registro.html">Registrate</a></li>
+        <li><a href="">Pet Friendly</a></li>
+        <li><a href="http://www.teprotejo.cl/">Cruelty Free</a></li>
+        <li><a href="https://www.facebook.com/TeProtejo/"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://www.instagram.com/teprotejo/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/TeProtejo"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Sidenav -->
+  <ul class="sidenav" id="mobile-demo">
+    <li class="brand-logo center" id="containerForLogo"><img src="Login/img/logounovoicepet.png"></li>
+    <li><a href="http://www.teprotejo.cl/">PET FRIENDLY</a></li>
+    <li><a href="http://www.teprotejo.cl/">CRUELTY FREE</a></li>
+    <div class="divider"></div>
+    <li><a href="Registro/registro.html">REGISTRATE</a></li>
+  </ul>
+
+  <!-- Main Page -->
+  <div class="container">
+    <section>
+      <h5>Encuentra lo que necesitas</h5>
+      <div>
+        <form id="mainCheckboxes" action="#">
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Veterinarias</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Refugios</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Tiendas Pet</span>
+            </label>
+          </p>
+        </form>
+      </div>
+      <!-- MAP GOES HERE!!! -->
+      <div class="ctrl-panel">
+        <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
+        <div class="form-group">
+          <label for="destination">Lo que buscas</label>
+          <select id="destination" onchange="route()">
+            <option value="">Busca aqui</option>
+            <option value="Av. Recoleta 3552, Recoleta">veterinarias</option>
+            <option value="French 2673, Recoleta">Petshop</option>
+            <option value="Río de La Plata 1229, Las Condes">Fundaciones</option>
+          </select>
+        </div>
+        <div>
+          <p id="direccion">Dirección:</p>
+        </div>
+      </div>
+      <div style="width:100%; height: 300px" id="mapContainer"></div>
+
+    </section>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./map/mapv/jsv/mainmapv.js"></script>
+  <script src="./map/mapv/jsv/mapv.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+
+</body>
+
+</html>
