@@ -32,6 +32,10 @@ body {
   color: #fafafa;
 }
 
+.sidenav > li > a:hover {
+  background-color: #009688;
+}
+
 #containerForLogo > a > img {
   padding: 2px;
   background-color: #2B3747;
