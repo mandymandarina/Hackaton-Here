@@ -8,7 +8,7 @@ function registerWithFirebase(){
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario creado con éxito");
-            location.href ="../muro.html";
+            location.href ='muro.html';
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -26,7 +26,7 @@ function loginWithFirebase(){
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario inició sesión con éxito");
-            location.href ="../muro.html";
+            location.href ="../../muro.html";
         })
         .catch((error)=>{
             console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
@@ -73,7 +73,7 @@ document.getElementById('logeoGoogle').addEventListener('click', function() {
           .then(function(result) {
               // logueado con éxito
               console.log('Hemos autenticado al usuario ', result.user);
-              location.href = "../muro.html";
+              location.href = "../../src/muro.html";
           })
           .catch(function(error) {
               // Fallo de login
